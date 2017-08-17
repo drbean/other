@@ -1,0 +1,13 @@
+
+module myvnc 1.0;
+
+require {
+	type init_t;
+	type lastlog_t;
+	class file { getattr read lock open};
+}
+
+#============= init_t ==============
+allow init_t lastlog_t:file read;
+allow init_t lastlog_t:file open;
+allow init_t lastlog_t:file lock;
