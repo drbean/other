@@ -67,3 +67,4 @@ tcpdump:x:72:
 mai:x:1000:
 screen:x:84:
 drbean:x:1001:
+postgres:x:26:
