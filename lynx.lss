@@ -5,8 +5,9 @@
 #
 # If you really want the terminal's default colors, and if lynx is built using
 # ncurses' default-color support, remove these two lines:
-normal:		normal:			lightgray:black
-default:	normal:			white:black
+# greg
+#normal:		normal:			lightgray:black
+#default:	normal:			white:black
 
 # Normal type styles correspond to HTML tags.
 #
@@ -25,13 +26,17 @@ blockquote:	normal:			brightblue
 ul:		normal:			brown
 address:	normal:			magenta
 title:		normal:			magenta
-tt:		dim:			brightmagenta:	black
+# greg
+# tt:		dim:			brightmagenta:	black
+tt:		dim:			magenta:	yellow
 h1:		bold:			yellow:		blue
 label:		normal:			magenta
 q:		normal:			yellow:		magenta
 small:		dim:			default
 big:		bold:			yellow
-sup:		bold:			yellow
+# greg
+# sup:		bold:			yellow
+sup:		bold:			brown
 sub:		dim:			gray
 li:		normal:			magenta
 code:		normal:			cyan
@@ -50,7 +55,9 @@ br:		normal:			default
 #	whereis	- whereis search target
 #
 #normal:normal:default:blue
-alink:		reverse:		yellow:		black
+# greg
+# alink:		reverse:		yellow:		black
+alink:		reverse:		white:		magenta
 status:		reverse:		yellow:		blue
 alert:		bold:			yellow:		red
 whereis:	reverse+underline:	magenta:	cyan
