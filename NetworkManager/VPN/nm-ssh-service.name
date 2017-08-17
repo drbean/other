@@ -1,0 +1,14 @@
+# This file is obsoleted by a file in /usr/lib/NetworkManager/VPN
+
+[VPN Connection]
+name=ssh
+service=org.freedesktop.NetworkManager.ssh
+program=/usr/libexec/nm-ssh-service
+
+[libnm]
+plugin=/usr/lib64/NetworkManager/libnm-vpn-plugin-ssh.so
+
+[GNOME]
+auth-dialog=/usr/libexec/nm-ssh-auth-dialog
+properties=/usr/lib64/NetworkManager/libnm-ssh-properties
+
