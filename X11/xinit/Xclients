@@ -10,6 +10,8 @@
 
 GSESSION="$(type -p gnome-session)"
 MSESSION="$(type -p mate-session)"
+#greg
+XMSESSION="$(type -p xmonad-start)"
 STARTKDE="$(type -p startkde)"
 STARTLXDE="$(type -p startlxde)"
 
@@ -21,6 +23,10 @@ if [ -f /etc/sysconfig/desktop ]; then
 	PREFERRED="$GSESSION"
     elif [ "$DESKTOP" = "MATE" ]; then
 	PREFERRED="$MSESSION"
+#greg
+    elif [ "$DESKTOP" = "XMONAD-MATE" ]; then
+	PREFERRED="$XMSESSION"
+	ARG="mate-session"
     elif [ "$DESKTOP" = "KDE" ]; then
 	PREFERRED="$STARTKDE"
     elif [ "$DESKTOP" = "LXDE" ]; then
@@ -29,7 +35,9 @@ if [ -f /etc/sysconfig/desktop ]; then
 fi
 
 if [ -n "$PREFERRED" ]; then
-    exec "$PREFERRED"
+#greg
+    exec "$PREFERRED" "$ARG"
+    # exec "xmonad-start" "mate-session"
 fi
 
 # now if we can reach here, either no desktop file was present,
