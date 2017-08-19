@@ -6,6 +6,8 @@
   <service name="ssh"/>
   <service name="samba-client"/>
   <service name="mdns"/>
+  <service name="http"/>
+  <service name="https"/>
   <port port="1025-65535" protocol="udp"/>
   <port port="1025-65535" protocol="tcp"/>
 </zone>
