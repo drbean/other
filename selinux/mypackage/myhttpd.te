@@ -1,0 +1,10 @@
+
+module myhttpd 1.0;
+
+require {
+	type httpd_t;
+	class capability net_admin;
+}
+
+#============= httpd_t ==============
+allow httpd_t self:capability net_admin;
