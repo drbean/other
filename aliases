@@ -87,6 +87,8 @@ info:		postmaster
 marketing:	postmaster
 sales:		postmaster
 support:	postmaster
+# moodle sending from noreply@sac
+noreply:      :fail:
 
 
 # trap decode to catch security attacks
@@ -94,3 +96,4 @@ decode:		root
 
 # Person who should get root's mail
 #root:		marc
+root:         drbean
