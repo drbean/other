@@ -1,10 +1,16 @@
-
-module myhttpd 1.0;
+module myhttpd 1.1;
 
 require {
 	type httpd_t;
 	class capability net_admin;
+
+	type var_lib_t;
+	class file { setattr unlink write };
+	class dir rmdir;
 }
 
 #============= httpd_t ==============
 allow httpd_t self:capability net_admin;
+
+allow httpd_t var_lib_t:dir rmdir;
+allow httpd_t var_lib_t:file { setattr unlink write };
