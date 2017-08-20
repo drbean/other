@@ -68,3 +68,4 @@ mai:x:1000:
 screen:x:84:
 drbean:x:1001:
 postgres:x:26:
+znc:x:981:
