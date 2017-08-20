@@ -69,3 +69,5 @@ screen:x:84:
 drbean:x:1001:
 postgres:x:26:
 znc:x:981:
+nginx:x:980:
+exim:x:93:

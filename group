@@ -10,7 +10,7 @@ mem:x:8:
 kmem:x:9:
 wheel:x:10:mai,drbean
 cdrom:x:11:
-mail:x:12:
+mail:x:12:exim
 man:x:15:
 dialout:x:18:
 floppy:x:19:
@@ -70,3 +70,4 @@ drbean:x:1001:
 postgres:x:26:
 znc:x:981:
 nginx:x:980:
+exim:x:93:
