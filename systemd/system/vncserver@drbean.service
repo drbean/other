@@ -38,6 +38,7 @@ Type=simple
 User=%i
 PAMName=login
 Environment=HOME=/home/%i
+Environment=XDGSESSIONTYPE=X11
 
 # Clean any existing files in /tmp/.X11-unix environment
 ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill :2 > /dev/null 2>&1 || :'
