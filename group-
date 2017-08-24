@@ -10,7 +10,7 @@ mem:x:8:
 kmem:x:9:
 wheel:x:10:mai,drbean
 cdrom:x:11:
-mail:x:12:
+mail:x:12:exim
 man:x:15:
 dialout:x:18:
 floppy:x:19:
