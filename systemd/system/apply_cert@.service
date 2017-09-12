@@ -1,0 +1,11 @@
+[Unit]
+Description=Run certbot certonly, get cert for drbean server
+OnFailure=status-email-drbean@%p.service
+
+[Service]
+Type=oneshot
+Nice=19
+ExecStart=/usr/bin/certbot certonly --standalone --domains momo.mydns.jp --non-interactive --preferred-challenges tls-sni
+
+[Install]
+WantedBy=multi-user.target
