@@ -8,6 +8,7 @@
   <service name="mdns"/>
   <service name="http"/>
   <service name="https"/>
+  <service name="smtp"/>
   <port port="1025-65535" protocol="udp"/>
   <port port="1025-65535" protocol="tcp"/>
 </zone>
