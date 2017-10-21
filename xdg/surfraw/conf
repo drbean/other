@@ -57,9 +57,7 @@ defyn   SURFRAW_graphical_remote	yes
 defyn   SURFRAW_new_window	no
 
 # name of screen command to run
-# greg
-# def   SURFRAW_screen		screen
-def   SURFRAW_screen		tmux
+def   SURFRAW_screen		screen
 
 # If surfraw is running under screen(1), start a new screen
 # for each text browser invocation?
