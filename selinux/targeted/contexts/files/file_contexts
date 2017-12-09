@@ -1435,6 +1435,7 @@
 /usr/sbin/insmod.*	--	system_u:object_r:insmod_exec_t:s0
 /usr/sbin/umount.*	--	system_u:object_r:mount_exec_t:s0
 /usr/sbin/munin-.*	--	system_u:object_r:munin_exec_t:s0
+/var/log/nsd\.log.*	--	system_u:object_r:nsd_log_t:s0
 /var/log/radutmp.*	--	system_u:object_r:radiusd_log_t:s0
 /var/log/radwtmp.*	--	system_u:object_r:radiusd_log_t:s0
 /var/log/iprdump.*	--	system_u:object_r:mdadm_log_t:s0
@@ -1469,7 +1470,6 @@
 /var/run/vhostmd.*	system_u:object_r:vhostmd_var_run_t:s0
 /usr/sbin/apache(2)?	--	system_u:object_r:httpd_exec_t:s0
 /usr/sbin/resize.*fs	--	system_u:object_r:fsadm_exec_t:s0
-/var/log/ganesha.log	--	system_u:object_r:ganesha_var_log_t:s0
 /usr/sbin/tomcat(6)?	--	system_u:object_r:tomcat_exec_t:s0
 /var/run/pki-kra.pid	system_u:object_r:pki_tomcat_var_run_t:s0
 /var/run/pki-tks.pid	system_u:object_r:pki_tomcat_var_run_t:s0
@@ -1479,6 +1479,7 @@
 /var/log/maillog[^/]*	system_u:object_r:var_log_t:s0
 /var/log/spooler[^/]*	system_u:object_r:var_log_t:s0
 /boot/System\.map(-.*)?	--	system_u:object_r:system_map_t:s0
+/var/log/ganesha.log.*	--	system_u:object_r:ganesha_var_log_t:s0
 /var/cache/swift(/.*)?	--	system_u:object_r:swift_var_cache_t:s0
 /usr/sbin/crack_[a-z]*	--	system_u:object_r:crack_exec_t:s0
 /var/spool/debug(/.*)?	system_u:object_r:abrt_var_cache_t:s0
@@ -1819,6 +1820,7 @@
 /etc/squid/ssl_db(/.*)?	system_u:object_r:squid_cache_t:s0
 /var/lib/one/\.ssh(/.*)?	system_u:object_r:ssh_home_t:s0
 /var/run/svnserve(/.*)?	system_u:object_r:svnserve_var_run_t:s0
+/var/log/svnserve(/.*)?	system_u:object_r:svnserve_log_t:s0
 /var/lib/dhclient(/.*)?	system_u:object_r:dhcpc_state_t:s0
 /var/lib/machines(/.*)?	system_u:object_r:systemd_machined_var_lib_t:s0
 /var/lib/tftpboot(/.*)?	system_u:object_r:tftpdir_rw_t:s0
@@ -2394,11 +2396,11 @@
 /etc/krb5kdc/principal.*	system_u:object_r:krb5kdc_principal_t:s0
 /var/www/cgi-bin/munin.*	system_u:object_r:munin_script_exec_t:s0
 /etc/rc\.d/init\.d/dhcpd(6)?	--	system_u:object_r:dhcpd_initrc_exec_t:s0
-/var/log/ganesha-gfapi.log	--	system_u:object_r:ganesha_var_log_t:s0
 /usr/lib/dri/fglrx_dri.so.*	--	system_u:object_r:textrel_shlib_t:s0
 /usr/lib/xine/plugins/.+\.so	--	system_u:object_r:textrel_shlib_t:s0
 /usr/share/virtualbox/.*\.sh	system_u:object_r:bin_t:s0
 /usr/lib/debug/usr/bin(/.*)?	--	system_u:object_r:bin_t:s0
+/var/log/ganesha-gfapi.log.*	--	system_u:object_r:ganesha_var_log_t:s0
 /usr/local/nagios/sbin(/.*)?	system_u:object_r:httpd_sys_script_exec_t:s0
 /var/cache/php-mmcache(/.*)?	system_u:object_r:httpd_cache_t:s0
 /var/lib/php/wsdlcache(/.*)?	system_u:object_r:httpd_var_run_t:s0
@@ -2839,9 +2841,9 @@
 /usr/lib/mediawiki/math/texvc.*	system_u:object_r:bin_t:s0
 /usr/lib/nagios/plugins/utils.sh	--	system_u:object_r:bin_t:s0
 /usr/lib/nagios/plugins/utils.pm	--	system_u:object_r:bin_t:s0
-/var/log/ipareplica-conncheck.log	--	system_u:object_r:ipa_log_t:s0
 /usr/local/linuxprinter/bin/l?lpr	--	system_u:object_r:lpr_exec_t:s0
 /usr/share/gitolite3/commands(/.*)?	--	system_u:object_r:bin_t:s0
+/var/log/ipareplica-conncheck.log.*	--	system_u:object_r:ipa_log_t:s0
 /var/lib/openshift/\.log/httpd(/.*)?	system_u:object_r:httpd_log_t:s0
 /var/lib/google-authenticator(/.*)?	system_u:object_r:var_auth_t:s0
 /usr/share/PackageKit/helpers(/.*)?	system_u:object_r:bin_t:s0
@@ -3938,7 +3940,6 @@
 /usr/sbin/ypbind	--	system_u:object_r:ypbind_exec_t:s0
 /usr/sbin/ypserv	--	system_u:object_r:ypserv_exec_t:s0
 /var/run/nsd\.pid	--	system_u:object_r:nsd_var_run_t:s0
-/var/log/nsd\.log	--	system_u:object_r:nsd_log_t:s0
 /usr/sbin/upsmon	--	system_u:object_r:nut_upsmon_exec_t:s0
 /usr/bin/pmproxy	--	system_u:object_r:pcp_pmproxy_exec_t:s0
 /var/run/fos\.pid	--	system_u:object_r:piranha_fos_var_run_t:s0
@@ -5807,6 +5808,7 @@
 /usr/share/munin/plugins/threads	--	system_u:object_r:system_munin_plugin_exec_t:s0
 /usr/share/munin/plugins/unbound	--	system_u:object_r:system_munin_plugin_exec_t:s0
 /usr/bin/nova-ajax-console-proxy	--	system_u:object_r:nova_exec_t:s0
+/usr/bin/postgresql-check-db-dir	--	system_u:object_r:postgresql_exec_t:s0
 /etc/rc\.d/init\.d/prelude-manager	--	system_u:object_r:prelude_initrc_exec_t:s0
 /etc/rc\.d/init\.d/rabbitmq-server	--	system_u:object_r:rabbitmq_initrc_exec_t:s0
 /var/run/cluster/fenced_override	--	system_u:object_r:fenced_var_run_t:s0

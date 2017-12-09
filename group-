@@ -71,3 +71,4 @@ postgres:x:26:
 znc:x:981:
 nginx:x:980:
 exim:x:93:
+bitlbee:x:979:
