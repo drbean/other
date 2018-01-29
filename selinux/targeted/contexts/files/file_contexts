@@ -1217,6 +1217,7 @@
 /var/run/ypbind.*	--	system_u:object_r:ypbind_var_run_t:s0
 /var/run/ypserv.*	--	system_u:object_r:ypserv_var_run_t:s0
 /var/run/yppass.*	--	system_u:object_r:yppasswdd_var_run_t:s0
+/var/log/opensm.*	--	system_u:object_r:opensm_log_t:s0
 /var/log/wsmand.*	--	system_u:object_r:openwsman_log_t:s0
 /var/run/wsmand.*	--	system_u:object_r:openwsman_run_t:s0
 /var/log/polipo.*	--	system_u:object_r:polipo_log_t:s0
@@ -2041,7 +2042,6 @@
 /usr/lib/libgpac\.so.*	--	system_u:object_r:textrel_shlib_t:s0
 /var/log/motion\.log.*	--	system_u:object_r:motion_log_t:s0
 /usr/bin/traceroute.*	--	system_u:object_r:traceroute_exec_t:s0
-/var/log/opensm\.log.*	--	system_u:object_r:opensm_log_t:s0
 /var/log/radius\.log.*	--	system_u:object_r:radiusd_log_t:s0
 /usr/sbin/readahead.*	--	system_u:object_r:readahead_exec_t:s0
 /etc/redis-sentinel.*	--	system_u:object_r:redis_conf_t:s0
@@ -2521,6 +2521,7 @@
 /var/lib/NetworkManager(/.*)?	system_u:object_r:NetworkManager_var_lib_t:s0
 /var/run/NetworkManager(/.*)?	system_u:object_r:NetworkManager_var_run_t:s0
 /var/run/wpa_supplicant(/.*)?	system_u:object_r:NetworkManager_var_run_t:s0
+/var/run/openvpn-server(/.*)?	system_u:object_r:openvpn_var_run_t:s0
 /var/lib/pki/pki-tomcat(/.*)?	system_u:object_r:pki_tomcat_var_lib_t:s0
 /var/log/pki/pki-tomcat(/.*)?	system_u:object_r:pki_tomcat_log_t:s0
 /var/lib/pki-ocsp/alias(/.*)?	system_u:object_r:pki_tomcat_cert_t:s0
@@ -3430,6 +3431,7 @@
 /var/run/utmp	--	system_u:object_r:initrc_var_run_t:s0
 /usr/bin/suck	--	system_u:object_r:innd_exec_t:s0
 /sbin/ipvsadm	--	system_u:object_r:iptables_exec_t:s0
+/usr/sbin/sln	--	system_u:object_r:ldconfig_exec_t:s0
 /bin/loadkeys	--	system_u:object_r:loadkeys_exec_t:s0
 /sbin/sulogin	--	system_u:object_r:sulogin_exec_t:s0
 /sbin/sushell	--	system_u:object_r:sulogin_exec_t:s0
