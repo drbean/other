@@ -1,4 +1,4 @@
-" Last Edit: 2017 Sep 18, 05:51:38 PM
+" Last Edit: 2018 Feb 15, 12:47:46 PM
 
 " I sourced this from $HOME/share/vim, using same vimrc on other platforms,
 " but now I've changed my mind, FTPing wrong file many times
@@ -841,7 +841,17 @@ function! WriteAnswer()
 	call setline(".", answer_string)
 endfunction
 
+au BufEnter cards.yaml no <buffer> <LocalLeader>c :call ClozeLine()<CR>
+function! ClozeLine()
+	let line = getline( line('.') )
+	let clozed = substitute(line, '          clozed: ', '', "")
+	let item = substitute(clozed, '\s', '|', "g")
+	let item_string = "          clozed: " . item
+	call setline(".", item_string)
+endfunction
+
 augroup END
+
 function! Nun()
 	nun <buffer> 0
 	nun <buffer> 1
