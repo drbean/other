@@ -1,4 +1,4 @@
-" Last Edit: 2018 Feb 15, 12:47:46 PM
+" Last Edit: 2018 Feb 15, 08:55:00 PM
 
 " I sourced this from $HOME/share/vim, using same vimrc on other platforms,
 " but now I've changed my mind, FTPing wrong file many times
@@ -846,7 +846,7 @@ function! ClozeLine()
 	let line = getline( line('.') )
 	let clozed = substitute(line, '          clozed: ', '', "")
 	let item = substitute(clozed, '\s', '|', "g")
-	let item_string = "          clozed: " . item
+	let item_string = "          clozed: " . item . "|End"
 	call setline(".", item_string)
 endfunction
 
